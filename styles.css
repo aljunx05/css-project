@@ -1,0 +1,50 @@
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5em;
+}
+
+#header {
+  background-color: black;
+  font-family: Arial;
+  height: 100px;
+}
+
+#contenwrapper {
+  float: left;
+  width: 100%;
+}
+
+#contentcolumn {
+  margin: 0 230px 0 230px;
+}
+
+#leftcolumn {
+  float: left;
+  width: 230px;
+  margin-left: -100%;
+  background-color: cyan;
+}
+
+#rightcolumn {
+  float: left;
+  width: 230px;
+  margin-left: -230px;
+  background-color: yellow;
+}
+
+.innertext {
+  margin: 20px;
+  font-family: Arial;
+  color: #5E5E5E;
+}
+
+#footer {
+  clear: left; /* Cannot float on Left*/
+  width: 100%;
+  background-color: black;
+  color: #FFF;
+  font-family: Arial;
+  text-align: center;
+  padding: 4px;
+ }
