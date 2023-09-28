@@ -10,7 +10,7 @@ body {
   height: 100px;
 }
 
-#contenwrapper {
+#contentwrapper {
   float: left;
   width: 100%;
 }
@@ -22,7 +22,7 @@ body {
 #leftcolumn {
   float: left;
   width: 230px;
-  margin-left: -100%;
+  margin-left: 100%;
   background-color: cyan;
 }
 
@@ -47,4 +47,73 @@ body {
   font-family: Arial;
   text-align: center;
   padding: 4px;
+ }
+
+ /** Navigation Bar **/
+
+ ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  display: inline;
+ }
+ 
+ li {
+  float: left;
+  border-right: 1px solid gray;
+ }
+
+ li:last-child {
+  border-right: none;
+ }
+
+ li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+ }
+
+ li a:hover:not(a.active) {
+  background-color: #808080;
+ }
+
+ .active {
+  background-color: #0099ff;
+ }
+
+ /** Responsive Layout CSS **/
+
+ @media (max-width: 840px) { /* Drop Right Column Down */
+  
+  #leftcolumn {
+    margin-left: -100%;
+  }
+
+  #rightcolumn {
+    float: none;
+    width: 100%;
+    margin-left: 0;
+    clear: both;
+  }
+
+  #contentcolumn {
+    margin-right: 0; /* Set margin to LeftColumnWidth */
+  }
+ }
+
+ @media (max-width: 600px) { /* Drop Left Column Down */
+  
+  #leftcolumn {
+    float: none;
+    width: 100%;
+    margin-left: 0;
+    clear: both;
+  }
+
+  #rightcolumn {
+    margin-left: 0;
+  }
  }
